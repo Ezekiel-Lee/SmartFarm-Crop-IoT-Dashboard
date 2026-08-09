@@ -1,0 +1,281 @@
+.app-shell {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px 60px;
+}
+
+.loading-message,
+.error-message {
+  text-align: center;
+  margin-top: 80px;
+  font-size: 1.1rem;
+}
+
+.app-header {
+  background: #2f5233;
+  color: white;
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+}
+
+.app-header-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.farm-status {
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: #4c7a52;
+}
+
+.status-normal { background: #3c8a4b; }
+.status-watch { background: #c98a2b; }
+.status-critical { background: #b8383a; }
+.status-unknown { background: #6b6b6b; }
+
+.app-header-meta {
+  display: flex;
+  gap: 20px;
+  font-size: 0.9rem;
+  margin-top: 8px;
+  opacity: 0.9;
+}
+
+.app-header-actions {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+}
+
+.app-header-actions button {
+  background: white;
+  color: #2f5233;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.app-header-actions button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.banner {
+  padding: 10px 14px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+}
+
+.banner-error {
+  background: #fde3e3;
+  color: #7a1f1f;
+  border: 1px solid #f2b6b6;
+}
+
+.banner-success {
+  background: #e2f3e4;
+  color: #1f5a2a;
+  border: 1px solid #b7dfbe;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 0;
+  color: #555;
+}
+
+.crop-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.crop-card {
+  background: white;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  border-left: 6px solid #999;
+}
+
+.crop-card.condition-dry { border-left-color: #c98a2b; }
+.crop-card.condition-healthy { border-left-color: #3c8a4b; }
+.crop-card.condition-too-wet { border-left-color: #2b6ec9; }
+.crop-card.condition-problem { border-left-color: #b8383a; }
+.crop-card.condition-unknown { border-left-color: #999; }
+
+.crop-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 6px;
+}
+
+.crop-card-header h3 {
+  margin: 0;
+}
+
+.crop-location {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.reading-block {
+  background: #f7f8f6;
+  border-radius: 6px;
+  padding: 8px 10px;
+  margin-bottom: 8px;
+}
+
+.reading-line {
+  margin: 2px 0;
+  font-size: 0.9rem;
+}
+
+.condition-line {
+  margin: 6px 0;
+}
+
+.alert-line {
+  color: #b8383a;
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin: 4px 0;
+}
+
+.invalid-field {
+  color: #b8383a;
+}
+
+.sensor-na {
+  color: #888;
+  font-style: italic;
+  font-size: 0.85rem;
+}
+
+.crop-card-settings {
+  font-size: 0.8rem;
+  color: #555;
+  border-top: 1px solid #eee;
+  margin-top: 8px;
+  padding-top: 8px;
+}
+
+.crop-card-settings p {
+  margin: 2px 0;
+}
+
+.crop-card-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.crop-card-actions button {
+  flex: 1;
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #f4f6f4;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.crop-card-actions button.danger {
+  color: #b8383a;
+  border-color: #e3b3b3;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 20;
+}
+
+.modal {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 420px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-wide {
+  max-width: 720px;
+}
+
+.modal h2 {
+  margin-top: 0;
+}
+
+.modal form label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+  color: #444;
+}
+
+.modal form input,
+.modal form select,
+.modal form textarea {
+  width: 100%;
+  padding: 6px 8px;
+  margin-top: 4px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+}
+
+.form-error {
+  color: #b8383a;
+  font-size: 0.85rem;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.modal-actions button {
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.history-table th,
+.history-table td {
+  border-bottom: 1px solid #eee;
+  padding: 6px 8px;
+  text-align: left;
+}
